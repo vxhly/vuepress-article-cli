@@ -51,7 +51,7 @@ const questions = [
     name: 'dateFormat',
     type: 'input',
     default: 'YYYY-MM-DD HH:mm:ss',
-    message: `What is the format of your article creation time?\n  (PS: Support for time formatting strings in moment.)`
+    message: `What's the format of your article creation time?\n  (PS: Support for time formatting strings in moment.)`
   },
   {
     name: 'filename',
@@ -76,7 +76,7 @@ const questions = [
         return true
       }
     },
-    message: `What is the filename of your article?\n  (PS: The default is your title.)`
+    message: `What's the filename of your article?\n  (PS: The default is your title.)`
   }
 
 ]

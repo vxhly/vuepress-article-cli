@@ -7,7 +7,7 @@
     "url": "git+https://github.com/vxhly/vuepress-article-cli.git"
   },
   "bin": {
-    "va-cli": "./bin/vuepress-article.js"
+    "va-cli": "./bin/va-cli.js"
   },
   "keywords": [
     "vuepress",
