@@ -1,0 +1,35 @@
+{
+  "name": "vuepress-article-cli",
+  "version": "1.0.0",
+  "description": "Create an article in vuepress's blog mode",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vxhly/vuepress-article-cli.git"
+  },
+  "bin": {
+    "va-cli": "./bin/vuepress-article.js"
+  },
+  "keywords": [
+    "vuepress",
+    "cli",
+    "article"
+  ],
+  "author": "vxhly <pengchengou@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vxhly/vuepress-article-cli/issues"
+  },
+  "homepage": "https://github.com/vxhly/vuepress-article-cli#readme",
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^4.0.0",
+    "figlet": "^1.2.4",
+    "find": "^0.3.0",
+    "inquirer": "^7.0.0",
+    "moment": "^2.24.0",
+    "pinyin": "^2.9.0"
+  }
+}
