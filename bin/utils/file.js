@@ -5,7 +5,7 @@ const moment = require('moment')
 function readFile (path, filename, func) {
   fs.readFile(path + '/' + filename, 'utf-8', function (err, data) {
     if (err) {
-      console.log(chalk.red('Failed to read file.'))
+      console.log(chalk.red(`Failed to read file ${filename}.`))
     } else {
       func(data)
     }
@@ -17,7 +17,7 @@ function writeFile (path, data, filename) {
     if (error) {
       throw error
     } else {
-      console.log(chalk.green(`The file ${path}/${filename} was created/updated successfully.`))
+      console.log(chalk.green(`The file ${path}/${filename} was created successfully.`))
     }
   })
 }

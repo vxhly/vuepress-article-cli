@@ -13,7 +13,7 @@ const TMP_FILE_NAME = 'article_tmp.md'
 const TMP_FILE = `${TMP_DIR}/${TMP_FILE_NAME}`
 const DOCS_VIEWS = 'docs/views'
 
-const initArticle = () => {
+const initArticle = (tmpdir) => {
   newArticleHandleInquirer()
     .then((choices) => {
       const {
@@ -32,12 +32,11 @@ const initArticle = () => {
       } else {
         _filename = filename
       }
-
       if (is_categories) {
-        copyFile(path.join(__dirname, '/tmp'), `docs/views/${newCategories}`, 'article_tmp.md', `${_filename}.md`, choices)
+        copyFile(tmpdir, `docs/views/${newCategories}`, 'article_tmp.md', `${_filename}.md`, choices)
       } else {
         mkdirs(`docs/views/${newCategories}`, () => {
-          copyFile(path.join(__dirname, '/tmp'), `docs/views/${newCategories}`, 'article_tmp.md', `${_filename}.md`, choices)
+          copyFile(tmpdir, `docs/views/${newCategories}`, 'article_tmp.md', `${_filename}.md`, choices)
         })
       }
     })
@@ -48,7 +47,7 @@ if (!is_RD_tmp) {
   console.log(chalk.red('Sorry, there is no template file under your directory.'))
   console.log(chalk.red('The CLI tool will continue to the next step using the default template file.'))
   console.log(chalk.yellow('You can create a template file with the command `va-cli tmp`.'))
-  initArticle()
+  initArticle(path.join(__dirname, '/tmp'))
 } else {
-  initArticle()
+  initArticle(TMP_DIR)
 }
